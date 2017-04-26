@@ -5,7 +5,6 @@ import com.cc.dao.AuthorityMapper;
 import com.cc.pojo.Authority;
 import com.cc.pojo.PostData;
 import com.cc.service.AuthorityService;
-import com.cc.utiltiy.Function;
 import com.google.gson.Gson;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;

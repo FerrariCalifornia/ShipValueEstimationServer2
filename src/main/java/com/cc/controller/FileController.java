@@ -57,6 +57,7 @@ public class FileController {
             }
             file.transferTo(new File(pathname+ File.separator + filename));
             System.err.println("filepath:"+pathname);
+            log.info("get"+filename +"success");
             return "success";
         }else {
             return "error";
@@ -97,6 +98,7 @@ public class FileController {
             }
             file.transferTo(new File(pathname+ File.separator + filename));
             System.err.println("filepath:"+pathname);
+            log.info("get"+filename +"success");
             return "success";
         }else {
             return "error";
