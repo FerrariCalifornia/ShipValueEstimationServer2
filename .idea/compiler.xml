@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ShipValue" />
         <module name="SilkRoad" />
         <module name="springMybatisTest1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ShipValue" target="1.6" />
       <module name="SilkRoad" target="1.6" />
       <module name="springMybatisTest1" target="1.6" />
     </bytecodeTargetLevel>

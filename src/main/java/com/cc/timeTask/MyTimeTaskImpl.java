@@ -105,4 +105,6 @@ public class MyTimeTaskImpl implements MyTimeTask{
         crawlerService.DataCrawler();
         log.info("Crawler data success");
     }
+
+
 }

@@ -2,7 +2,6 @@ package com.cc.controller;
 
 
 import com.cc.dao.AuthorityMapper;
-import com.cc.pojo.Authority;
 import com.cc.pojo.PostData;
 import com.cc.service.AuthorityService;
 import com.google.gson.Gson;
