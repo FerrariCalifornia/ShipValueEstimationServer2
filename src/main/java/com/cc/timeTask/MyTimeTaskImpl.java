@@ -26,10 +26,15 @@ public class MyTimeTaskImpl implements MyTimeTask{
     private static Logger log =Logger.getLogger(MyTimeTaskImpl.class);//    @Scheduled(cron="0/9 * * * * ?")
     // 每月2号凌晨两点执行
 //    @Scheduled(cron="0 1 0 1 * ? ")
-    @Scheduled(cron="0 0/3 * * * ? ")
+    // 三分钟一次
+    // @Scheduled(cron="0 0/3 * * * ? ")
+
+    //每小时3分开始
+    @Scheduled(cron="0 3 * * * ? ")
     @Override
     public void upload_data20() {
         System.out.println("start time task");
+        log.info("start upload 20");
         String filepath1=null;
         String filepath2=null;
         String filepath3=null;
@@ -57,15 +62,21 @@ public class MyTimeTaskImpl implements MyTimeTask{
         fileService.uploadFile(file3,upload_url,info);
         fileService.uploadFile(file4,upload_url,info);
         System.out.println("upload success20");
-        log.info("upload success 20");
+        log.info("upload "+file1.getName()+"success to floder 20");
+        log.info("upload "+file2.getName()+"success to floder 20");
+        log.info("upload "+file3.getName()+"success to floder 20");
+        log.info("upload "+file4.getName()+"success to floder 20");
 
     }
 
 
 //    @Scheduled(cron="0 1 0 1 * ? ")
-    @Scheduled(cron="0 0/3 * * * ? ")
+//    @Scheduled(cron="0 0/3 * * * ? ")
+//每小时3分开始
+    @Scheduled(cron="0 3 * * * ? ")
     @Override
     public void upload_data90() {
+        log.info("start upload 90");
         System.out.println("start time task");
         String filepath1=null;
         String filepath2=null;
@@ -94,14 +105,20 @@ public class MyTimeTaskImpl implements MyTimeTask{
         fileService.uploadFile(file3,upload_url,info);
         fileService.uploadFile(file4,upload_url,info);
         System.out.println("upload success 90");
-        log.info("upload success 90");
+        log.info("upload "+file1.getName()+"success to floder 90");
+        log.info("upload "+file2.getName()+"success to floder 90");
+        log.info("upload "+file3.getName()+"success to floder 90");
+        log.info("upload "+file4.getName()+"success to floder 90");
     }
 
 
     // 每月1号凌晨两点执行
 //    @Scheduled(cron="0 0 0 1 * ? ")
-    @Scheduled(cron="0 0/2 * * * ? ")
+    //@Scheduled(cron="0 0/2 * * * ? ")
+    //每小时5分开始
+    @Scheduled(cron="0 0 * * * ? ")
     public void crawlerData(){
+        log.info("start Crawler data");
         crawlerService.DataCrawler();
         log.info("Crawler data success");
     }
