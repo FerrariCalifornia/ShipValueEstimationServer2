@@ -24,13 +24,9 @@ public class MyTimeTaskImpl implements MyTimeTask{
     private CrawlerService crawlerService;
 
     private static Logger log =Logger.getLogger(MyTimeTaskImpl.class);//    @Scheduled(cron="0/9 * * * * ?")
-    // 每月2号凌晨两点执行
-//    @Scheduled(cron="0 1 0 1 * ? ")
-    // 三分钟一次
-    // @Scheduled(cron="0 0/3 * * * ? ")
 
-    //每小时3分开始
-    @Scheduled(cron="0 3 * * * ? ")
+    //每隔三个月执行一次 凌晨零点5分
+    @Scheduled(cron="0 5 0 1 1/3 ? ")
     @Override
     public void upload_data20() {
         System.out.println("start time task");
@@ -70,10 +66,8 @@ public class MyTimeTaskImpl implements MyTimeTask{
     }
 
 
-//    @Scheduled(cron="0 1 0 1 * ? ")
-//    @Scheduled(cron="0 0/3 * * * ? ")
-//每小时3分开始
-    @Scheduled(cron="0 3 * * * ? ")
+    //每隔三个月执行一次 凌晨零点5分
+    @Scheduled(cron="0 5 0 1 1/3 ? ")
     @Override
     public void upload_data90() {
         log.info("start upload 90");
@@ -112,11 +106,8 @@ public class MyTimeTaskImpl implements MyTimeTask{
     }
 
 
-    // 每月1号凌晨两点执行
-//    @Scheduled(cron="0 0 0 1 * ? ")
-    //@Scheduled(cron="0 0/2 * * * ? ")
-    //每小时5分开始
-    @Scheduled(cron="0 0 * * * ? ")
+    //每隔三个月执行一次 凌晨零点零分
+    @Scheduled(cron="0 0 0 1 1/3 ? ")
     public void crawlerData(){
         log.info("start Crawler data");
         crawlerService.DataCrawler();
